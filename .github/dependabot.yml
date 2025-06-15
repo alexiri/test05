@@ -1,0 +1,15 @@
+---
+# ba0fde3d-bee7-4307-b97b-17d0d20aff50
+version: 2
+updates:
+
+  # Maintain dependencies for Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "cron"
+      cronjob: "5 * * * *" # Every hour at 5 minutes past the hour
+    open-pull-requests-limit: 5
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
