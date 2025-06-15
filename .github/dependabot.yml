@@ -7,8 +7,8 @@ updates:
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "cron"
-      cronjob: "5 * * * *" # Every hour at 5 minutes past the hour
+      interval: "daily"
+      time: "04:00"
     open-pull-requests-limit: 5
     ignore:
       - dependency-name: "*"
